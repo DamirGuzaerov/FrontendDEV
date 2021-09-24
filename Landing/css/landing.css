@@ -104,7 +104,7 @@ ins{
 .main__wrapper{
     position: relative;
     margin: 0 auto;
-    padding-top: 110px;
+    padding-top: 56px;
     padding-bottom: 354px;
     max-width: 1280px;
     width: 100%;
@@ -114,6 +114,9 @@ ins{
 }
 
 
+.landing__main{
+    position: relative;
+}
 
 #main__image{
     position: absolute;
