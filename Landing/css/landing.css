@@ -18,11 +18,15 @@ ins{
 =================================== */
 
 .header__wrapper{
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
-    margin: 0 auto;
-    max-width: 1280px;
+    height: 56px;
     width: 100%;
     z-index: 1;
+    background: white;
+    box-shadow: 0 4px 5px rgba(57, 63, 72, 0.3);
+    position: fixed;
 }
 
 .landing__header{
@@ -33,10 +37,7 @@ ins{
     width: 1280px;
     height: 56px;
     padding: 0 108px 0 108px;
-    box-shadow: 0 4px 5px rgba(57, 63, 72, 0.3);
-    background: white;
-    position: fixed;
-    z-index: 1;
+    background: inherit;
 }
 
 .header__logo{
@@ -102,11 +103,11 @@ ins{
 
 
 .main__wrapper{
+    display: flex;
+    justify-content: center;
     position: relative;
-    margin: 0 auto;
-    padding-top: 56px;
+    padding-top: 112px;
     padding-bottom: 354px;
-    max-width: 1280px;
     width: 100%;
     height: 100%;
     background: #F9F9F9;
@@ -116,6 +117,7 @@ ins{
 
 .landing__main{
     position: relative;
+    max-width: 1280px;
 }
 
 #main__image{
@@ -283,6 +285,9 @@ ins{
     box-shadow: rgba(151, 149, 149, 0.25) 0px 4px 4px;
     border: 0;
 }
+.slider__btns:hover{
+    background: #35cb78;    
+}
 
 #right-btn img{
     transform: rotate(180deg);
@@ -347,6 +352,10 @@ ins{
     left: 33px;
     bottom: 23.03px;
     border: none;
+}
+.interactive__card__btn:hover{
+    background: #3F3D56;
+    cursor: pointer;
 }
 .card__background__img{
     position: absolute;
@@ -415,10 +424,21 @@ ins{
     font-size: 35px;
     line-height: 20px;
 }
+.sub-title__active__cell:hover{
+    cursor: pointer;
+}
 .sub-title__info__text{
     font-family: 'Open Sans';
     font-size: 35px;
-    line-height: 20px;
+    line-height: 53px;
+    padding: 0 17px;
+    border-radius: 20px;
+}
+
+.sub-title__info__text:hover{
+    background:linear-gradient(70.79deg, #35cb78 10.03%, #58a57b 114.42%);
+    cursor: pointer;
+
 }
 .sub-title__text__container{
     margin: 0;
@@ -517,6 +537,12 @@ ins{
     font-size: 25px;
     line-height: 18px;
     margin-top: 30px;
+}
+
+.order__btn:hover{
+    background: rgb(238, 229, 229);
+    color: #35CC79;
+    cursor: pointer;
 }
 .active__support__img{
     position: absolute;
@@ -643,6 +669,10 @@ ins{
     box-shadow: rgba(151, 149, 149, 0.25) 0px 4px 4px;
     border: 0;
 }
+
+.kkt__slider__btns:hover{
+    background: #35CC79;
+}
 #right-kkt__btn img{
     transform: rotate(180deg);
 }
@@ -705,6 +735,7 @@ ins{
     color: #898989;
     margin-bottom: 10px;
   }
+
   .select__items__container{
     width: 553px;
     height: 70px;
@@ -720,7 +751,7 @@ ins{
 
     appearance: none;
     -webkit-appearance: none; 
-    background: url("selector__arrow.png") no-repeat right #FFFFFF;
+    background: url("../resources/img/selector__arrow.png") no-repeat right #FFFFFF;
     background-position: 97% 50%; 
     margin-bottom: 50px;
   }
@@ -857,29 +888,27 @@ ins{
 
 
    .footer__wrapper{
-    display: flex;
-    flex-direction: column;
     background-color: #F9F9F9;
     position: relative;
-    margin: 0 auto;
-    max-width: 1280px;
-    width: 100%;
-    height: 100%;
+    background-image: url(../resources/img/footer_background.png);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+   }
+
+   .footer__content{
+    padding-right: 100px;
+    padding-left: 100px;
+    padding: 0 100px 72px;
    }
 
    .reminder__container{
        display: flex;
    }
 
-   .footer__bg{
-    position: absolute;
-    top:0;
-   }
-
    .reminder{
     position: relative;
     top: 215px;
-    margin-left: 100px;
    }
 
    .reminder__text{
@@ -904,6 +933,7 @@ ins{
    }
 
    .input__field{
+    box-sizing: border-box;
     width: 385px;
     height: 70px;
     display: flex;
@@ -963,7 +993,6 @@ ins{
    
    .label__end{
        margin-top:196px;
-       margin-left: 100px;
    }
    .iris__contacts{
        position: relative;
@@ -999,7 +1028,6 @@ ins{
     font-size: 16px;
     line-height: 120%;
     margin-top: 40px;
-    margin-left: 100px;
    }
 
 
