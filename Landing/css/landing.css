@@ -424,9 +424,11 @@ ins{
     font-size: 35px;
     line-height: 20px;
 }
+
 .sub-title__active__cell:hover{
     cursor: pointer;
 }
+
 .sub-title__info__text{
     font-family: 'Open Sans';
     font-size: 35px;
