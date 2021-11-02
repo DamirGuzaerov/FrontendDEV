@@ -1,0 +1,344 @@
+@media (min-device-width: 375px) and (max-device-width:768px){
+    
+    a{
+        text-decoration: none;
+    }
+    
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ins{
+        text-decoration-color: #B4ABAB;
+        text-underline-offset: 15px;
+        text-decoration-thickness: 3px;
+    }
+    h1{
+        box-sizing: border-box;
+    }
+
+    .title__zero-type{
+        font-family: 'Open Sans';
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 35px;
+
+        padding: 0;
+        margin-left: 18px;
+        margin-top: 6px;
+
+        box-sizing: border-box;
+    }
+
+    div{
+        width: 375px;
+    }
+
+    #main__image{
+        content: url(/resources/img/mainImageMobile.png);
+        top: 54px;
+        left: 43px
+    }
+
+    /* Header 
+    =================================== */
+    
+    .header__wrapper{
+        display: none;
+        max-width: 768px;
+        min-width: 360px;
+    }
+    
+    /* Body
+    =================================== */
+
+    .main__wrapper{
+        padding-top: 0;
+    }
+    .first__sub-title{
+        width: auto;
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 224px;
+    }
+
+    .main__sub-titles{
+        margin: 22px 0 0 20px;
+    }
+
+    .main__sub-titles-content{
+        font-family: Source Sans Pro;
+        margin-top:30px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .title__first-type{
+        margin-top: 60px;
+        font-size: 30px;
+        line-height: 24px;
+    }
+
+    .second__sub-title{
+        margin-top: 212px;
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .main__devs-img{
+        position: absolute;
+        left: 20px;
+        top: 507px;
+        width: 335px;
+        height: 165px;
+    }
+
+    .main__card{
+        border-radius: 5px;
+        width: 158px;
+        height: 135px;
+        margin-left: 9.5px;
+        margin-right: 9.5px;
+        margin-bottom: 56px;
+    }
+
+    .main__about-us{
+        flex-direction: column-reverse;
+        margin-top: 69px;
+    }
+
+    .main__card__title__container{
+        width: 135px;
+    }
+    .main__card__title{
+        font-family: Open Sans;
+        font-size: 12px;
+        line-height: 13px;
+        height: 13px;
+        width: 135px;
+    }
+
+    .main__card .icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border-width: 4px;
+    }
+
+    .main__card .icon img{
+        width: 20px;
+        height: 40px;
+    }
+
+    .main__card-content{
+        margin: 0;
+        width: max-content;
+    }
+
+    .main__card-content__text{
+        padding-top: 5px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: normal;
+        margin: 0;
+        width: 135px;
+    }
+
+    .title__third-type{
+        margin: -16px 0 0 20px;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: left;
+        
+        color: #000000;
+    }
+
+    .main__tables__container{
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .main__tables__container .table__slider__btns{
+        display: none;
+    }
+
+    .interactive__cards__row{
+        margin: 0;
+        justify-content: center;
+    }
+
+    .interactive__card{
+        width: 335px;
+        height: 197px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .interactive__card__title{
+        width: max-content;
+        font-weight: 600;
+        font-size: 25.4902px;
+        line-height: 7px;
+        
+        padding: 0;
+        margin-top: 20px;
+
+        color: #FFFFFF;
+    }
+
+    #first__card,#second__card,#third__card,#fourth__card{
+        margin: 0;
+    }
+
+    #second__card,#third__card,#fourth__card{
+        display: none;
+    }
+
+    .card__background__img{
+        left: 188px;
+        top: 46px;
+        height: 139px;
+        width: 129px;
+    }
+
+    #shopping_1_img{
+        top: 6px;
+        left: 150px;
+        width: 210px;
+    }
+    
+    .interactive__card__btn{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        left: 21px;
+        bottom: 17.29px;
+    }
+
+    .interactive__card__btn img{
+        width: 16px;
+        height: 16px;
+    }
+
+    .kkt__radio__btns.main__tables__radio{
+        display: flex;
+        position: static;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .title__second-type{
+        margin: 20px 0 0 20px;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: left;
+    }
+    
+    .sub-title__container{
+        margin: 0;
+        margin-top: 50px;
+        order:1;
+    }
+
+    .sub-title__content{
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .sub-title__info__container{
+        height: 40px;   
+        padding: 0 11px;
+        background: linear-gradient(70.79deg, #35cb78 10.03%, #58a57b 114.42%);
+        border-radius: 20px;
+    }
+
+    .sub-title__info__container{
+        width: max-content;
+        height: 40px;   
+        padding: 0 11px;
+    }
+
+    .sub-title__info__text{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+        padding: 0
+    }
+
+    .sub-title__active__cell{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    .sub-title__text__container{
+        margin: 0;
+        padding: 0;
+        margin-top: 60px;
+    }
+
+    .sub-title__text{
+        font-size: 18px;
+        line-height: 30px;
+        text-align: left;
+        margin-left: 22px;
+
+        padding: 0;
+    }
+
+    .seond__table{
+
+    }
+
+    .table__slider__btns{
+        display: none
+    }
+    #third__block,#fourth__block{
+        display: none;
+    }
+
+    .second__table__row{
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .second__table__block{
+        width: 335px;
+        height: 227px;
+    }
+
+    .second__table__block__text{
+        width: auto;
+        height: auto;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .active__support__img{
+
+    }
+
+    .second__table__block__title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+
+
+    
+}
+
+
+
+
+ 
+
+
+
