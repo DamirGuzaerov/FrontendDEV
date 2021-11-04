@@ -711,6 +711,8 @@ ins{
 .radio__btns{
     margin: 0;
     margin-left: 6px;
+    width: 10px;
+    height: 10px;
 }
 
  input {
@@ -830,6 +832,10 @@ ins{
       background: linear-gradient(70.79deg, #35cb78 10.03%, #58a57b 114.42%);
   }
 
+  .sub-title__text__container.mobile{
+    display: none;
+  }
+  
   .application__block{
     background: #FFFFFF;
     box-shadow: 0px 0px 1.0422px rgba(0, 0, 0, 0.08), 0px 1.0422px 12.5065px rgba(0, 0, 0, 0.08);
