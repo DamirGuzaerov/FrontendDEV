@@ -955,6 +955,10 @@ ins{
     color: black;
    }
 
+   .iris__logo__mobile{
+        display: none;
+   }
+   
    .data__input__block{
     display: flex;
     flex-direction: column;

@@ -34,7 +34,7 @@
   }
 
   div {
-    width: 375px;
+    width: auto;
   }
 
   #main__image {
@@ -623,6 +623,93 @@
     white-space: nowrap;
     padding: 32px 0;
     text-align: center;
+  }
+
+  .main__wrapper{
+    padding-bottom: 30.85px;
+  }
+
+  .footer__wrapper{
+    width: 100%;
+    flex-direction: column;
+    background-image: url(/resources/img/Rectangle\ 99.png);
+  }
+
+  .footer__content{
+    width: auto;
+    padding: 0;
+    margin: 0 20px;
+    padding-bottom: 85px;
+  }
+
+  .reminder__container{
+    flex-direction: column;
+    width: auto;
+  }
+
+  .reminder{
+    width: auto;
+    top: 63px;
+  }
+  .reminder__text{
+    width: auto;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 110%;
+    height: auto;
+  }
+
+  .data__input__block{
+    width: auto;
+    margin: 0;
+    top: 60px;
+  }
+
+  .input__field{
+    width: auto;
+    height: 50px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .iris__logo{
+    display: none;
+  }
+  .iris__logo__mobile{
+    display:block;
+    margin: 0 54px;
+    margin-top: 85px;
+    width: auto;
+  }
+
+  .input__field__label{
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  #app__white-btn{
+    width: auto;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .label__end{
+    margin-top: 58px;
+  }
+
+  .iris__contacts{
+    flex-direction: column-reverse;
+  }
+
+  .iris__contacts__content{
+    margin-bottom: 25px;
+  }
+
+  .something__important{
+    width: auto;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 120%;  
   }
 
 }
