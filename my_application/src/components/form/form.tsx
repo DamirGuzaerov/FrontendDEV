@@ -1,15 +1,18 @@
 import {Input} from "../input/input";
+import {Button} from "../button/button";
 import React from "react";
+import "./form.sass"
 
 export interface IFormProps extends React.HTMLAttributes<HTMLFormElement> {
 }
 
 
-export function Form(props:IFormProps){
+export function AuthForm(props:IFormProps){
     return(
-        <>
-            <Input type = "email" placeholder="E-mail"></Input>
-            <Input type = "password" placeholder="Password"></Input>
-        </>
+        <div className="baseForm">
+            <Input type = "email" placeholder="Адрес электронной почты" className="emailField"></Input>
+            <Input type = "password" placeholder="Пароль"className="passField"></Input>
+            <Button type={"button"} className="authBtn" value="Войти"></Button>
+        </div>
     )
 }

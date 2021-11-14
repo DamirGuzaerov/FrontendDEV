@@ -1,12 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route, Router, Routes, BrowserRouter,Link} from 'react-router-dom';
 import './App.css';
-import {Form} from "./components/form/form";
+
+import {Main} from "./Pages/Main/main";
+import {Auth} from "./Pages/Auth/auth";
+
 function App() {
   return (
-    <div className="App">
-      <Form></Form>
-    </div>
+      <>
+          <BrowserRouter>
+              <Routes>
+                  <Route path="/"element={<Main />} />
+                  <Route  path= "auth/*"element={<Auth />} />
+              </Routes>
+              <Link to="/">Main Page</Link>
+              <Link to="/auth">Auth Page</Link>
+          </BrowserRouter>
+      </>
   );
 }
 
