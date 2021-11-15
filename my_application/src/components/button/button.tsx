@@ -7,7 +7,7 @@ export interface IButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
 
 export function Button(props : IButtonProps){
     return (
-        <button type = {props.type}>
+        <button className={props.className} type = {props.type} onClick={props.onClick}>
             {props.value}
         </button>
 )

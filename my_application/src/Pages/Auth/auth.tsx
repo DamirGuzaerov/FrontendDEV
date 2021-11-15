@@ -8,7 +8,7 @@ export function Auth(){
             <div className="authContainer">
                 <img src={logo} alt=""/>
                 <AuthForm />
-                    <li className="toRegistration">Еще не зарегестрирвоаны ?
+                    <li className="toLink">Еще не зарегестрирвоаны ?
                         <Link to = "/registration" className="regLink">Регистрация</Link>
                     </li>
             </div>
