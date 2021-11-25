@@ -4,8 +4,8 @@ import {AuthForm} from "../../components/form/form";
 import {BrowserRouter, Link} from "react-router-dom";
 export function Auth(){
     return(
+        <div className="authContainer">
         <div className="auth">
-            <div className="authContainer">
                 <img src={logo} alt=""/>
                 <AuthForm />
                     <li className="toLink">Еще не зарегестрирвоаны ?

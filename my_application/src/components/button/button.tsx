@@ -1,5 +1,6 @@
 import React from 'react';
-import './button.sass'
+import styles from './button.module.sass'
+
 export interface IButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     type: "button" | "submit" | "reset" | undefined;
     value?:string;
@@ -7,7 +8,7 @@ export interface IButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
 
 export function Button(props : IButtonProps){
     return (
-        <button className={props.className} type = {props.type} onClick={props.onClick}>
+        <button className={styles.authButton} type = {props.type} onClick={props.onClick}>
             {props.value}
         </button>
 )
