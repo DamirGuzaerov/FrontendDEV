@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./card.sass"
+import styles from "./card.module.sass";
 
 export interface ICardProps {
     title:string,
@@ -9,10 +9,10 @@ export interface ICardProps {
 
 export function Card(props:ICardProps){
     return(
-        <div className="card">
-            <img className="cardBackground" src={props.posterImgUrl} alt={props.title} />
-            <span className="cardTitle">{props.title}</span>
-            <span className="cardRate">{props.rate}</span>
+        <div className={styles.card}>
+            <img className={styles.cardImg}src={props.posterImgUrl} alt={props.title} />
+            <div className={styles.cardRate}>{props.rate}</div>
+            <div className={styles.cardTitle}>{props.title}</div>
         </div>
         )
 }

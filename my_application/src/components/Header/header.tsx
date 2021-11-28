@@ -12,7 +12,7 @@ export function Header() {
                     <button className={styles.navBtn}><img className={styles.btnIcon} src={plus} alt=""/>Добавить</button>
                 </div>
                 <img src={logo} alt=""/>
-                <div className={styles.twoElementsContainer}>
+                <div className={styles.leftPaddingContainer}>
                     <button className={styles.navBtn}><img className={styles.btnIcon} src={search} alt=""/>Поиск</button>
                     <div className={styles.profileImg}></div>
                 </div>
