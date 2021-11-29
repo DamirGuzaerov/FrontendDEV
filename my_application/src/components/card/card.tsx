@@ -2,9 +2,12 @@ import React, {useState} from "react";
 import styles from "./card.module.sass";
 
 export interface ICardProps {
-    title:string,
-    rate:string,
-    posterImgUrl:string,
+    id?:number,
+    title?:string,
+    rate?:string,
+    posterImgUrl?:string,
+    description?:string,
+    genre?:string[],
 }
 
 export function Card(props:ICardProps){

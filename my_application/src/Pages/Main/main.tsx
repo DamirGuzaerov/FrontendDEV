@@ -5,10 +5,10 @@ import {Header} from "../../components/Header/header";
 import {Card} from "../../components/card/card";
 import styles from "./main.module.sass";
 import {SwitchButton} from "../../components/switchButtons/switchButton";
+import {Link} from "react-router-dom";
 
 export const Main = observer(() => {
     const {collectionStore:{collection}} = useStores()
-    let iterator=0;
     return(
         <>
             <Header />
@@ -20,7 +20,7 @@ export const Main = observer(() => {
                         <img className="listIcon" src="" alt=""/>
                     </div>
                     <div className={styles.cardsContainer}>
-                        {collection.map((film) =><Card title={film.title} rate={film.rate} posterImgUrl={film.posterImgUrl}/>,iterator++)}
+                        {collection.map((film) =><Link to = {"/Main/"+film.id} className="regLink"><Card id={film.id} title={film.title} rate={film.rate} posterImgUrl={film.posterImgUrl}/></Link>)}
                     </div>
                 </div>
             </div>

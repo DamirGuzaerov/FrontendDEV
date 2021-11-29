@@ -7,6 +7,9 @@ import mainStore from "./stores/mainStore"
 import {Main} from "./Pages/Main/main";
 import {Auth} from "./Pages/Auth/auth";
 import {Registration} from "./Pages/Registration/registration";
+import {Card} from "./components/card/card";
+import collectionStore from "./stores/collectionStore";
+import {CardPage} from "./Pages/CardPage/cardPage";
 
 function App() {
   return (
@@ -16,6 +19,7 @@ function App() {
                   <Routes>
                       <Route path="registration/" element={<Registration/>}/>
                       <Route path="/Main"element={<Main />} />
+                      <Route path="/Main/:id" element={<CardPage/>}/>
                       <Route  path= "auth/"element={<Auth />} />
                   </Routes>
                   <Link to="/Main">Main Page</Link>
