@@ -1,8 +1,26 @@
+.btn
+  padding: 6px 8px
+  width: 173px
+  height: 28px
+  border-radius: 6.93px
+  font-weight: 600
+  font-size: 15px
+  line-height: 20px
+  letter-spacing: -0.24px
+  display: flex
+  align-items: center
+  justify-content: center
+
 .active
-  color: #00009a
+  @extend .btn
+  background: #FFFFFF
+  border: 0.5px solid rgba(0, 0, 0, 0.04)
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04)
 
 .noActive
-  color: red
+  @extend .btn
+  border: 0
+  box-shadow: none
 
 
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from './button/button.module.sass'
+import switchBtnsStyles from '../switchButtons/switchBtns.module.sass'
 import {Button} from "./button/button";
 export function SwitchButton(){
 
@@ -25,9 +26,9 @@ export function SwitchButton(){
     let secondBtn =
         <Button className={isSecondClicked?styles.active:styles.noActive} type = "button"  value="Просмотрено" onClick={clickHandlerSecond} />
     return (
-        <>
+        <div className={switchBtnsStyles.switchBtns}>
             {firstBtn}
             {secondBtn}
-        </>
+        </div>
     )
 }

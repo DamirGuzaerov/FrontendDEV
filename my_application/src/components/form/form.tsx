@@ -6,7 +6,6 @@ import "./form.sass"
 export interface IFormProps extends React.HTMLAttributes<HTMLFormElement> {
 }
 
-
 export function AuthForm(props:IFormProps){
     const [login,setLogin] = useState<string>('');
     const [password,setPassword] = useState<string>('');

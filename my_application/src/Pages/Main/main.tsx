@@ -5,6 +5,7 @@ import {Header} from "../../components/Header/header";
 import {Card} from "../../components/card/card";
 import styles from "./main.module.sass";
 import {SwitchButton} from "../../components/switchButtons/switchButton";
+import list_icon from "../../assets/img/Icon_List.png";
 import {Link} from "react-router-dom";
 
 export const Main = observer(() => {
@@ -15,9 +16,9 @@ export const Main = observer(() => {
             <div className={styles.mainContainer}>
                 <div className="main">
                     <div className={styles.mainTitle}>Коллекция</div>
-                    <div className={styles.switchBtns}>
+                    <div className={styles.switchButtonContainer}>
                         <SwitchButton/>
-                        <img className="listIcon" src="" alt=""/>
+                        <img className={styles.listIcon} src={list_icon} alt=""/>
                     </div>
                     <div className={styles.cardsContainer}>
                         {collection.map((film) =><Link to = {"/Main/"+film.id} className="regLink"><Card id={film.id} title={film.title} rate={film.rate} posterImgUrl={film.posterImgUrl}/></Link>)}
