@@ -1,5 +1,5 @@
 import {MainStore} from "./mainStore";
-import {makeObservable,observable,action} from "mobx";
+import {makeObservable,observable,action,get} from "mobx";
 import {ICardProps} from "../components/card/card";
 import poster0 from '../../src/assets/img/posters/abobusPoster.png'
 import poster1 from '../../src/assets/img/posters/midsomamr.png'
@@ -10,6 +10,7 @@ import poster5 from '../../src/assets/img/posters/father.png'
 import poster6 from '../../src/assets/img/posters/drunk.png'
 import poster7 from '../../src/assets/img/posters/soul.png'
 import poster8 from '../../src/assets/img/posters/godzilla.png'
+import {createAction} from "mobx/dist/core/action";
 
 
 const collectionMock:ICardProps[] = [
@@ -75,13 +76,18 @@ const collectionMock:ICardProps[] = [
     },
 ]
 export default class collectionStore {
-    public collection: ICardProps[]
+    collection: ICardProps[]
 
     constructor(public mainStore:MainStore) {
-        makeObservable(this,{
-            collection:observable,
+        makeObservable(this, {
+            collection: observable,
         })
 
-        this.collection=collectionMock;
+        this.collection = collectionMock;
     }
+
+    public GetCardById = (id?:string) => {
+        return this.collection.find((card)=>card.id?.toString()===id)
+    }
+
 }
