@@ -1,2 +1,2 @@
-import {Input} from "../../../input/input";
-import {IInputProps} from "../../../input/input";
+import {Input} from "../../../ui/input/input";
+import {IInputProps} from "../../../ui/input/input";

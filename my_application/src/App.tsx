@@ -4,12 +4,12 @@ import {Route, Router, Routes, BrowserRouter,Link} from 'react-router-dom';
 import './App.css';
 import mainStore from "./stores/mainStore"
 
-import {Main} from "./Pages/Main/main";
-import {Auth} from "./Pages/Auth/auth";
-import {Registration} from "./Pages/Registration/registration";
+import {Main} from "./pages/main/main";
+import {Auth} from "./pages/auth/auth";
+import {Registration} from "./pages/registration/registration";
 import {Card} from "./components/card/card";
 import collectionStore from "./stores/collectionStore";
-import {CardPage} from "./Pages/CardPage/cardPage";
+import {CardPage} from "./pages/cardPage/cardPage";
 
 function App() {
   return (

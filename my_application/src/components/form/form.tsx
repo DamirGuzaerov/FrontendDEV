@@ -1,7 +1,7 @@
-import {Input} from "../input/input";
-import {Button} from "../button/button";
+import {Input} from "../ui/input/input";
+import {Button} from "../ui/button/button";
 import React, {useState} from "react";
-import "./form.sass"
+import "./form.module.sass"
 
 export interface IFormProps extends React.HTMLAttributes<HTMLFormElement> {
 }

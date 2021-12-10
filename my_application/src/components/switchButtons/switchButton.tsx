@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from './button/button.module.sass'
-import switchBtnsStyles from '../switchButtons/switchBtns.module.sass'
+import switchBtnsStyles from './switchBtns.module.sass'
 import {Button} from "./button/button";
 export function SwitchButton(){
 

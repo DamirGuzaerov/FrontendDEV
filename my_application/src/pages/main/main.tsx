@@ -1,11 +1,12 @@
 import './main.module.sass';
 import {observer} from "mobx-react";
 import {useStores} from "../../utils/stores-utils";
-import {Header} from "../../components/Header/header";
+import {Header} from "../../components/header/header";
 import {Card} from "../../components/card/card";
 import styles from "./main.module.sass";
 import {SwitchButton} from "../../components/switchButtons/switchButton";
 import list_icon from "../../assets/img/Icon_List.png";
+import {CardsCollection} from "../../components/cardsCollection/cardsCollection";
 import {Link} from "react-router-dom";
 
 export const Main = observer(() => {
@@ -20,9 +21,7 @@ export const Main = observer(() => {
                         <SwitchButton/>
                         <img className={styles.listIcon} src={list_icon} alt=""/>
                     </div>
-                    <div className={styles.cardsContainer}>
-                        {collection.map((film) =><Link to = {"/Main/"+film.id} className="regLink"><Card id={film.id} title={film.title} rate={film.rate} posterImgUrl={film.posterImgUrl}/></Link>)}
-                    </div>
+                    <CardsCollection></CardsCollection>
                 </div>
             </div>
         </>

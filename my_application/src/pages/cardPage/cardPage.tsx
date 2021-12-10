@@ -1,19 +1,18 @@
 import {observer} from "mobx-react";
 import {useStores} from "../../utils/stores-utils";
-import {Header} from "../../components/Header/header";
-import styles from "../CardPage/cardPage.module.sass";
+import {Header} from "../../components/header/header";
+import styles from ".//cardPage.module.sass";
 import {useParams} from "react-router";
-import {FullCard} from "../../components/CardFull/fullCard";
+import {FullCard} from "../../components/cardFull/fullCard";
+import collectionStore from "../../stores/collectionStore";
+import {get} from "mobx";
 
 export const CardPage = observer(() => {
-    const {collectionStore:{collection}} = useStores()
+    const {collectionStore:{GetCardById,collection}} = useStores()
     const params = useParams();
 
-    function GetCardById(id?:string) {
-       return collection.find((card)=>card.id?.toString()===id)
-    }
-
     const currentCard = GetCardById(params.id);
+
     return(
         <>
             <Header />
