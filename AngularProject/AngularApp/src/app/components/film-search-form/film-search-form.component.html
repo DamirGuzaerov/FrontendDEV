@@ -1,0 +1,11 @@
+<div [formGroup]="form" class="formGroup">
+  <div>
+    <div class="inputContainer">
+      <label for="textInput">Название</label>
+      <input type="text" id="textInput" placeholder="Например, Титаник" formControlName="searchInput">
+    </div>
+  </div>
+</div>
+<div class="films" *ngFor="let item of films$ | async">
+  <app-film-preview-card previewImg="{{item.imgUrl}}" previewText="{{item.name}}" year="{{item.year}}"></app-film-preview-card>
+</div>

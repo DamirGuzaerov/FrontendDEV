@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="homeBodyContainer">
+  <div class="homeBody">
+    <form [formGroup]="form">
+      <app-toggle-btn class="toggleButtonContainer" (innerValueToParent)="updateInnerValue($event)" formControlName="toggle"></app-toggle-btn>
+    </form>
+    <ng-container *ngIf="innerValue">
+      <app-film-search-form></app-film-search-form>
+    </ng-container>
+  </div>
+</div>
+

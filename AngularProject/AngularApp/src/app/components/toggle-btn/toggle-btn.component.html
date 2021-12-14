@@ -1,0 +1,9 @@
+<div class="toggleButton">
+  <button class="toggle" [class.active]="innerValue" (click)="toggle(true)">
+    КиноПоиск
+  </button>
+  <button class="toggle" [class.active]="!innerValue" (click)="toggle(false)">
+    Вручную
+  </button>
+</div>
+
