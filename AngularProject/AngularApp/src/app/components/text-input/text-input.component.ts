@@ -1,5 +1,5 @@
 import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
-import {ControlValueAccessor, FormControl} from "@angular/forms";
+import {ControlValueAccessor, FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-text-input',
@@ -13,6 +13,8 @@ export class TextInputComponent implements ControlValueAccessor {
   @Input() placeholder = "";
   @Input() name = "";
   @Input() controlName = "";
+  @Input() value = ""
+
 
   constructor() { }
 

@@ -23,8 +23,6 @@ export class FilmSearchFormComponent implements OnInit {
     this.form.get('searchInput')?.valueChanges.subscribe(res=>this.filmService.searchFilm(res))
   }
 
-
-
   ngOnInit(): void {
   }
 

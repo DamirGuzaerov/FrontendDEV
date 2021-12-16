@@ -1,4 +1,4 @@
-<div [formGroup]="form" class="formGroup">
+<div [formGroup] = "form" class="formGroup">
   <div>
     <div class="inputContainer">
       <label for="textInput">Название</label>
@@ -6,9 +6,8 @@
     </div>
   </div>
 </div>
-<div class="films" *ngFor="let item of films$ | async">
-  <app-film-preview-card previewImg="{{item.imgUrl}}" previewText="{{item.name}}" year="{{item.year}}"></app-film-preview-card>
-</div>
 <router-outlet>
-
+  <div class="films" *ngFor="let item of films$ | async">
+    <app-film-preview-card [routerLink]="['film',item.id]" previewImg="{{item.imgUrl}}" previewText="{{item.name}}" year="{{item.year}}"></app-film-preview-card>
+  </div>
 </router-outlet>

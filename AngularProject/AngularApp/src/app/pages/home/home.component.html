@@ -2,9 +2,10 @@
 <div class="homeBodyContainer">
   <div class="homeBody">
     <form [formGroup]="form">
-      <app-toggle-btn class="toggleButtonContainer"  formControlName="toggle"></app-toggle-btn>
+      <app-toggle-btn class="toggleButtonContainer" (innerValueToParent)="updateInnerValue($event)" formControlName="toggle"></app-toggle-btn>
     </form>
-      <router-outlet></router-outlet>
+    <router-outlet>
+    </router-outlet>
   </div>
 </div>
 
