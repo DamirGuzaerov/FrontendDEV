@@ -9,3 +9,6 @@
 <div class="films" *ngFor="let item of films$ | async">
   <app-film-preview-card previewImg="{{item.imgUrl}}" previewText="{{item.name}}" year="{{item.year}}"></app-film-preview-card>
 </div>
+<router-outlet>
+
+</router-outlet>
