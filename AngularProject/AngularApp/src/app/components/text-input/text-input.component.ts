@@ -1,31 +1,39 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
-import {ControlValueAccessor, FormControl, FormGroup} from "@angular/forms";
+import {Component, OnInit, ChangeDetectionStrategy, Input, forwardRef} from '@angular/core';
+import {ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ActivatedRoute} from "@angular/router";
+import {FilmService} from "../../services/film.service";
 
 @Component({
   selector: 'app-text-input',
   templateUrl: './text-input.component.html',
   styleUrls: ['./text-input.component.sass'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      multi: true,
+      useExisting: forwardRef(() => TextInputComponent),
+    }
+  ]
 })
 export class TextInputComponent implements ControlValueAccessor {
 
-  textInput = new FormControl('');
   @Input() placeholder = "";
   @Input() name = "";
-  @Input() controlName = "";
   @Input() value = ""
 
 
-  constructor() { }
+  constructor(
+    )
+  {
+  }
 
   writeValue(obj: any): void {
-        throw new Error('Method not implemented.');
+        this.value = obj
     }
     registerOnChange(fn: any): void {
-        throw new Error('Method not implemented.');
     }
     registerOnTouched(fn: any): void {
-        throw new Error('Method not implemented.');
     }
 
   ngOnInit(): void {
