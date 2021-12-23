@@ -26,4 +26,8 @@ export class FilmSearchFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  clearFilms(){
+    this.films$.next([]);
+  }
+
 }

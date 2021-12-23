@@ -1,5 +1,6 @@
 import {Component, OnInit, ChangeDetectionStrategy, forwardRef, Output, EventEmitter} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {FilmService} from "../../services/film.service";
 
 @Component({
   selector: 'app-toggle-btn',
@@ -23,7 +24,7 @@ export class ToggleBtnComponent implements ControlValueAccessor {
     this.innerValueToParent.emit(value);
   }
 
-  constructor() { }
+  constructor(private  filmService:FilmService) { }
 
   ngOnInit(): void {
   }
@@ -48,6 +49,7 @@ export class ToggleBtnComponent implements ControlValueAccessor {
       this.onChangeCallback(val);
       this.onTouchedCallback();
       this.updateInnerValueToParent(val);
+      this.filmService.films$.next([]);
     }
   }
 }
