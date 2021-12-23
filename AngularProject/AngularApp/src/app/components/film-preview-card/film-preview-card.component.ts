@@ -14,6 +14,7 @@ export class FilmPreviewCardComponent implements OnInit {
   @Input() previewImg:string = "";
   @Input() previewText:string ="Фильм не найден";
   @Input() year:string="";
+  @Input() link: string = "Добавьте его вручную";
 
   films$ = this.filmService.films$;
 

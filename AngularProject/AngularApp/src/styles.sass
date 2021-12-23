@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+
+.btnContainer
+  display: flex
+  justify-content: center
+.btn
+  display: flex
+  align-items: center
+
+  padding: 8px 13px
+
+  background: white
+  box-sizing: border-box
+  border-radius: 21.5px
+
+  font-style: normal
+  font-weight: 500
+  font-size: 18px
+  line-height: 21px
+  letter-spacing: -0.336px
+
+.saveBtn
+  &:hover
+    cursor: pointer
+    background: antiquewhite
+  color: #00009a
+  border: 2px solid #002DFF
+
+
+.btnIcon
+  margin-right: 11px
+
+input,textarea
+  width: 100%
+  box-sizing: border-box
+
+  padding: 19px 16px
+
+  font-style: normal
+  font-weight: normal
+  font-size: 17px
+  line-height: 22px
+  letter-spacing: -0.408px
+
+  border: none
+  border-bottom: 0.5px solid rgba(0,0,0,0.2)
+
+  &:focus
+    outline: none
+
+.inputContainer
+  width: 100%
+  &:first-child
+    margin-top: 40px
+  &:not(:first-child)
+    margin-top: 20px
+
+
+
+  &:focus
+    background: inherit
+    outline: none
+
+label
+  margin-left: 16px
+
+  font-style: normal
+  font-weight: bold
+  font-size: 22px
+  line-height: 28px
+  letter-spacing: 0.8px
+
+textarea
+  font-family: Arial
+  overflow: hidden
+  height: 100px
+  max-height: 200px
+  resize: none
+
+.link
+  font-size: 13px
+  color: #00009a
+  &:hover
+    cursor: pointer

@@ -8,6 +8,6 @@
 </div>
 <router-outlet>
   <div class="films" *ngFor="let item of films$ | async">
-    <app-film-preview-card [routerLink]="['film',item.id]" previewImg="{{item.imgUrl}}" previewText="{{item.name}}" year="{{item.year}}"></app-film-preview-card>
+    <app-film-preview-card [routerLink]="item.id!=0?['film',item.id]:['']" link="{{item.link}}" previewImg="{{item.imgUrl}}" previewText="{{item.name}}" year="{{item.year}}"></app-film-preview-card>
   </div>
 </router-outlet>

@@ -1,0 +1,32 @@
+<label for="textInput">{{name}}</label>
+<input #trigger= "cdkOverlayOrigin"
+       type="text"
+       [formControl]="inputSearch"
+       id="textInput"
+       placeholder="Выберите из списка"
+       cdkOverlayOrigin>
+
+<div class="chips">
+  <button class="chip" *ngFor="let genre of selectedGenres" (click)="removeGenre(genre)">
+    {{genre?.label}}
+  </button>
+</div>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin] = "trigger"
+  [cdkConnectedOverlayOpen]="overlayIsOpen"
+  [cdkConnectedOverlayHasBackdrop] = "true"
+  (backdropClick)="close()"
+  [cdkConnectedOverlayBackdropClass]="'backdrop'"
+  [cdkConnectedOverlayWidth]="473"
+>
+  <div class="genres">
+    <button
+      class="genre"
+      *ngFor="let genre of genres"
+      (click)="selectGenre(genre)">
+      {{genre?.label}}
+    </button>
+  </div>
+</ng-template>

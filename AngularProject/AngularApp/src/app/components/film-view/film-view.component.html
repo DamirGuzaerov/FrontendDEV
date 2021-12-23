@@ -1,0 +1,19 @@
+<form [formGroup]="formGroup" action="">
+  <div class="inputContainer">
+  <app-text-input formControlName="nameInput" controlName="nameInput" name="Название" placeholder="Например, Титаник"></app-text-input>
+  </div>
+    <div class="inputContainer">
+  <app-text-input formControlName="yearInput"  name="Год" placeholder="Укажите год выхода фильма"></app-text-input>
+    </div>
+
+  <div class="inputContainer">
+    <label for="descriptionInput">Описание</label>
+    <textarea type="text" id="descriptionInput" placeholder="Напишите пару слов о сюжете" formControlName="descriptionInput"></textarea>
+  </div>
+  <div class="inputContainer">
+  <app-genre-search [selectedGenres]="film.genre"></app-genre-search>
+  </div>
+  <div class="btnContainer" id="saveBtnContainer">
+    <button class="btn saveBtn"><img class="btnIcon" src="assets/images/plus.png" alt=""/>Сохранить</button>
+  </div>
+</form>

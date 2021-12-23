@@ -2,6 +2,7 @@ import {Component, OnInit, ChangeDetectionStrategy, Input, forwardRef} from '@an
 import {ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ActivatedRoute} from "@angular/router";
 import {FilmService} from "../../services/film.service";
+import {BindingType} from "@angular/compiler";
 
 @Component({
   selector: 'app-text-input',
@@ -18,25 +19,34 @@ import {FilmService} from "../../services/film.service";
 })
 export class TextInputComponent implements ControlValueAccessor {
 
+  inputControl:FormControl = new FormControl("");
+
   @Input() placeholder = "";
   @Input() name = "";
-  @Input() value = ""
 
+  constructor(){}
 
-  constructor(
-    )
-  {
+  onChangeCallback = (v:string)=>{};
+  onTouchedCallback = ()=>{};
+
+  registerOnChange(fn: any): void {
+    this.onChangeCallback = fn;
   }
 
-  writeValue(obj: any): void {
-        this.value = obj
-    }
-    registerOnChange(fn: any): void {
-    }
-    registerOnTouched(fn: any): void {
-    }
+  registerOnTouched(fn: any): void {
+    this.onTouchedCallback = fn;
+  }
+
+  writeValue(val: any): void {
+      this.inputControl.setValue(val);
+  }
 
   ngOnInit(): void {
   }
 
+  setValue(){
+    console.log(this.inputControl.value);
+    this.onChangeCallback(this.inputControl.value);
+    this.onTouchedCallback();
+  }
 }
