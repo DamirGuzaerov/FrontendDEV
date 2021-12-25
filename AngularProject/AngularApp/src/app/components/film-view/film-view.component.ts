@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import {Film, FilmService} from "../../services/film.service";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {Genre} from "../genre-search/genre-search.component";
 @Component({
   selector: 'app-film-view',
   templateUrl: './film-view.component.html',
@@ -26,6 +27,17 @@ export class FilmViewComponent implements OnInit {
       yearInput:[this.film?.year],
     });
   }
+
   ngOnInit() {
+  }
+
+  addNewGenre(genres:Array<Genre>){
+    this.film.genre = genres;
+  }
+
+  saveChanges(){
+    this.film.name = this.formGroup.get('nameInput')?.value;
+    this.film.year = this.formGroup.get('yearInput')?.value;
+    this.film.description = this.formGroup.get('descriptionInput')?.value;
   }
 }
