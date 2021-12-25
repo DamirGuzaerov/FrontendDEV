@@ -1,5 +1,5 @@
 import React, {Dispatch, SetStateAction} from 'react';
-import './input.sass'
+import './input.module.sass'
 
 export interface IInputProps{
     type: string;

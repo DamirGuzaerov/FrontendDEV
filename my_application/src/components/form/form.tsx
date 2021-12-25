@@ -1,12 +1,17 @@
 import {Input} from "../ui/input/input";
 import {Button} from "../ui/button/button";
 import React, {useState} from "react";
-import "./form.module.sass"
+import  "./form.sass"
+import {observer} from "mobx-react";
+import authorizationStore from "../../stores/authorizationStore";
+import {useStores} from "../../utils/stores-utils";
 
 export interface IFormProps extends React.HTMLAttributes<HTMLFormElement> {
 }
 
-export function AuthForm(props:IFormProps){
+export const AuthForm = observer((props:IFormProps)=>{
+    const {authStore:{GetToken,SetToken}} = useStores()
+
     const [login,setLogin] = useState<string>('');
     const [password,setPassword] = useState<string>('');
     const [loginFieldClass,setLoginClass] = useState<string>('emailField');
@@ -30,9 +35,11 @@ export function AuthForm(props:IFormProps){
             setLoginClass("emailField error");
             setPassClass("passField error");
             setMessageClass("messageShow");
+            alert("Ошибка")
         }
         else {
-            alert("Успешно!")
+            SetToken("тестовый токен (по хорошему тут должен быть какой-то хэш)")
+            alert(GetToken())
         }
     }
 
@@ -57,9 +64,11 @@ export function AuthForm(props:IFormProps){
             <Button type={"button"} className="authBtn" value="Войти" onClick={submitForm}></Button>
         </div>
     )
-}
+})
 
-export function RegForm(props:IFormProps){
+export const RegForm = observer(()=>{
+    const {authStore:{GetToken,SetToken}} = useStores()
+
     const [login,setLogin] = useState<string>('');
     const [password,setPassword] = useState<string>('');
     const [passwordRepeat,setPasswordRepeat] = useState<string>('');
@@ -85,7 +94,8 @@ export function RegForm(props:IFormProps){
             setMessageClass("messageShow");
         }
         else {
-            alert("Успешно!")
+            SetToken("тестовый токен (по хорошему тут должен быть какой-то хэш)")
+            alert(GetToken())
         }
     }
 
@@ -118,4 +128,4 @@ export function RegForm(props:IFormProps){
             <Button type={"button"} className="authBtn" value="Регистрация" onClick={submitForm}></Button>
         </div>
     )
-}
+})
