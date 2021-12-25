@@ -27,6 +27,7 @@ export class FilmSearchFormComponent implements OnInit {
   }
 
   clearFilms(){
+    this.form.get('searchInput')?.reset();
     this.films$.next([]);
   }
 

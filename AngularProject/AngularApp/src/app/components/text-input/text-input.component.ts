@@ -45,7 +45,6 @@ export class TextInputComponent implements ControlValueAccessor {
   }
 
   setValue(){
-    console.log(this.inputControl.value);
     this.onChangeCallback(this.inputControl.value);
     this.onTouchedCallback();
   }

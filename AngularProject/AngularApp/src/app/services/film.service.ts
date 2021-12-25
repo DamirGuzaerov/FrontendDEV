@@ -122,7 +122,8 @@ export class FilmService {
 
   addNewFilm(film:Film): void{
     film.id = FilmsMock.length;
-    film.imgUrl = '/assets/images/Dovlatov.png',
+    film.imgUrl = '/assets/images/Dovlatov.png';
+    console.log(film)
     FilmsMock.push(film);
   }
 }
