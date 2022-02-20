@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "../../components/header/header";
 import BannerSwiper from "../../components/swiper/bannerSwiper";
-import {inspect} from "util";
 import styles from "./main.module.sass";
 import NavCard from "../../components/navCard/navigationCard";
+import Footer from "../../components/footer/footer";
+
+
 
 function Main() {
     return (
-        <div>
+        <div className={styles.mainPage}>
             <Header/>
             <div className={styles.mainCards__wrapper}>
                 <BannerSwiper/>
@@ -16,6 +18,7 @@ function Main() {
                     <NavCard text={"Используй заработанные \n экокоины для покупки товаров \n из переработанных материалов "} title={"ЭкоМаркет"}/>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }
