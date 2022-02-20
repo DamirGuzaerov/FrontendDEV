@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Inter:wght@400;700&display=swap');
 *{
-  font-size: 16px;
+  font-family: Inter;
   box-sizing: border-box;
 }
 

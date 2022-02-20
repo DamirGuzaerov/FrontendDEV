@@ -16,7 +16,10 @@ const Banner :FC<BannerProps> = (props) => {
         <div className={styles.banner__wrapper}>
             <div className={styles.banner}>
                 <h1 className={styles.bannerTitle}>{props.title}</h1>
-                <span className={styles.bannerText}>{props.text}</span>
+                <p className={styles.bannerText}>{props.text}</p>
+                <button className={styles.bannerBtn}>
+                    <span className={styles.bannerBtnText}>Условия сервиса</span>
+                </button>
             </div>
         </div>
     );
