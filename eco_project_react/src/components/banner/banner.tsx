@@ -6,8 +6,8 @@ import {text} from "stream/consumers";
 interface BannerProps{
     title:string,
     text:string,
-    /*btnText:string,
-    bgImg:string,
+    btnText:string,
+    /*bgImg:string,
     backLayer:string*/
 }
 
@@ -18,7 +18,7 @@ const Banner :FC<BannerProps> = (props) => {
                 <h1 className={styles.bannerTitle}>{props.title}</h1>
                 <p className={styles.bannerText}>{props.text}</p>
                 <button className={styles.bannerBtn}>
-                    <span className={styles.bannerBtnText}>Условия сервиса</span>
+                    <span className={styles.bannerBtnText}>{props.btnText}</span>
                 </button>
             </div>
         </div>
