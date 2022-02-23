@@ -49,19 +49,47 @@ html {
 }
 
 .swiper-button-next{
+  width: 44px;
+  height: 44px;
+
+  border-radius: 100%;
+  box-shadow: 0px 4px 24px rgba(0, 11, 38, 0.12);
+
   background: url("assets/images/rightArrow.png");
+  background-color: #FFFFFF;
   background-repeat: no-repeat;
   background-position: 50% ;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  border: #282c34 1px solid;
-  width: 44px;
-  height: 44px;
-  border-radius: 100%;
-  right: -50px;
+
+  right: -22px;
 }
 
 .swiper-button-next::after{
+  display: none;
+}
+
+.swiper-button-prev{
+  width: 44px;
+  height: 44px;
+
+  border-radius: 100%;
+  box-shadow: 0px 4px 24px rgba(0, 11, 38, 0.12);
+
+  background: url("assets/images/leftArrow.png");
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-position: 50% ;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  left: -22px;
+}
+
+.swiper-button-prev::after{
   display: none;
 }
