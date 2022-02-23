@@ -1,25 +1,31 @@
 import React, {FC} from "react";
-import 'swiper/css/bundle'
 import styles from "./banner.module.sass";
-import {text} from "stream/consumers";
+import Icon from "../icon/icon";
 
 interface BannerProps{
     title:string,
     text:string,
     btnText:string,
-    /*bgImg:string,
-    backLayer:string*/
+    bgColor:string,
+    bgImg:string,
+    bgImgWidth:number,
+    bgImgHeight:number
 }
 
 const Banner :FC<BannerProps> = (props) => {
     return (
-        <div className={styles.banner__wrapper}>
-            <div className={styles.banner}>
-                <h1 className={styles.bannerTitle}>{props.title}</h1>
-                <p className={styles.bannerText}>{props.text}</p>
-                <button className={styles.bannerBtn}>
-                    <span className={styles.bannerBtnText}>{props.btnText}</span>
-                </button>
+        <div className={styles.bannerWrapper} >
+            <div className={styles.banner} style={{"backgroundColor": `${props.bgColor}`}}>
+                <div className={styles.bannerContent}>
+                    <h1 className={styles.bannerTitle}>{props.title}</h1>
+                    <p className={styles.bannerText}>{props.text}</p>
+                    <button className={styles.bannerBtn}>
+                        <span className={styles.bannerBtnText}>{props.btnText}</span>
+                    </button>
+                </div>
+                <div className={styles.bannerImg}>
+                    <Icon name={props.bgImg} width={props.bgImgWidth} height={props.bgImgHeight}/>
+                </div>
             </div>
         </div>
     );

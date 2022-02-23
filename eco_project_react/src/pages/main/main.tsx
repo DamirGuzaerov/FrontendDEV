@@ -4,8 +4,6 @@ import BannerSwiper from "../../components/swiper/bannerSwiper";
 import styles from "./main.module.sass";
 import NavCard from "../../components/navCard/navigationCard";
 import Footer from "../../components/footer/footer";
-import navFirstImg from "../../assets/images/mapImg.png"
-import navSecondImg from "../../assets/images/Illustration.png"
 
 function Main() {
     return (
@@ -14,13 +12,16 @@ function Main() {
             <div className={styles.mainCards__wrapper}>
                 <BannerSwiper/>
                 <div className={styles.navCards}>
-                    <NavCard text={"Посмотри, где в твоем городе\n можно сдать вторсырьё \n на переработку"}
+                    <NavCard text={"Посмотри, где в твоем городе \nможно сдать вторсырьё \nна переработку"}
                              title={"Пункты сбора"}
-                             bgImg={navFirstImg}
-                    />
-                    <NavCard text={"Используй заработанные \n экокоины для покупки товаров \n из переработанных материалов "}
+                             bgImg={"map"}
+                             bgImgWidth={312}
+                             bgImgHeight={230}/>
+                    <NavCard text={"Используй заработанные  \nэкокоины для покупки товаров  \nиз переработанных материалов "}
                              title={"ЭкоМаркет"}
-                             bgImg={navSecondImg}
+                             bgImg={"market"}
+                             bgImgWidth={237}
+                             bgImgHeight={257}
                     />
                 </div>
             </div>

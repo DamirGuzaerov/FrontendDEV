@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./header.module.sass";
+import Icon from "../icon/icon";
 
 function Header() {
     return (
@@ -7,7 +8,7 @@ function Header() {
                 <header className={styles.header}>
                     <nav className={styles.navPanel}>
                         <div className={styles.header__logo}>
-                            <img src="assets/images/ecorusLogo.png" alt="EcoRusLogo"/>
+                            <Icon name={"ecorusLogo"} width={94} height={18}/>
                         </div>
                         <ul className={styles.navList}>
                             <li className={styles.navLink}>
@@ -26,11 +27,15 @@ function Header() {
                     </nav>
                     <ul className={styles.navList}>
                         <li className={styles.navLink}>
-                            <img src="assets/images/view-box.png" className={styles.header__icon}/>
+                            <div className={styles.headerIcon}>
+                                <Icon name={"mapPointer"} width={24} height={24}></Icon>
+                            </div>
                                 Казань
                         </li>
                         <li className={styles.navLink}>
-                            <img src="assets/images/Union.png" className={styles.header__icon}/>
+                            <div className={styles.headerIcon}>
+                                <Icon name={"login"} width={24} height={24}></Icon>
+                            </div>
                                 Войти
                         </li>
                     </ul>

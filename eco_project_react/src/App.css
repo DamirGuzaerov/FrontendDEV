@@ -47,3 +47,21 @@ html {
     transform: rotate(360deg);
   }
 }
+
+.swiper-button-next{
+  background: url("assets/images/rightArrow.png");
+  background-repeat: no-repeat;
+  background-position: 50% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #282c34 1px solid;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  right: -50px;
+}
+
+.swiper-button-next::after{
+  display: none;
+}
