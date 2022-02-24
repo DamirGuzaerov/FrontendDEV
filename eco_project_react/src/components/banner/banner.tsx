@@ -8,8 +8,6 @@ interface BannerProps{
     btnText:string,
     bgColor:string,
     bgImg:string,
-    bgImgWidth:number,
-    bgImgHeight:number
 }
 
 const Banner :FC<BannerProps> = (props) => {
@@ -24,7 +22,7 @@ const Banner :FC<BannerProps> = (props) => {
                     </button>
                 </div>
                 <div className={styles.bannerImg}>
-                    <object data={props.bgImg} type=""></object>
+                    <object data={props.bgImg} type=""/>
                 </div>
             </div>
         </div>

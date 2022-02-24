@@ -1,14 +1,11 @@
 import React, {FC} from "react";
 import styles from "./navigationCard.module.sass";
 import rightArrow from "../../assets/images/rightArrow.png"
-import Icon from "../icon/icon";
 
 interface NavCardProps{
     title:string,
     text:string,
     bgImg:string,
-    bgImgWidth:number,
-    bgImgHeight:number
 }
 const NavCard :FC<NavCardProps> = (props) => {
     return (
@@ -23,7 +20,7 @@ const NavCard :FC<NavCardProps> = (props) => {
                 </div>
                 <div className={styles.navCardImgWrapper}>
                     <div className={styles.navCardImg}>
-                        <object data={props.bgImg} type=""></object>
+                        <object data={props.bgImg} type=""/>
                     </div>
                 </div>
             </div>

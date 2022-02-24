@@ -14,10 +14,7 @@ function BannerSwiper() {
                 modules={[Navigation]}
                 spaceBetween={50}
                 slidesPerView={1}
-                navigation/*={{
-                nextEl:styles.nextEl,
-                prevEl:styles.prevEl
-            }}*/
+                navigation
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
                 className={styles.customSwiper}
@@ -29,8 +26,6 @@ function BannerSwiper() {
                         btnText={'Условия сервиса'}
                         bgColor={"#B3EDC8"}
                         bgImg = {recycling}
-                        bgImgWidth = {560}
-                        bgImgHeight = {320}
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -40,8 +35,6 @@ function BannerSwiper() {
                         btnText={'Узнать больше'}
                         bgColor={"#FFE48F"}
                         bgImg = {flowers}
-                        bgImgWidth = {560}
-                        bgImgHeight = {320}
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -51,12 +44,8 @@ function BannerSwiper() {
                         btnText={'Пункты сбора масок'}
                         bgColor={"#BFF0DE"}
                         bgImg = {masks}
-                        bgImgWidth = {560}
-                        bgImgHeight = {320}
                     />
                 </SwiperSlide>
-                {/* <button className={styles.nextEl}></button>
-            <button className={styles.prevEl}></button>*/}
             </Swiper>
         </div>
     );

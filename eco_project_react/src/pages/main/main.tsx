@@ -16,14 +16,11 @@ function Main() {
                     <NavCard text={"Посмотри, где в твоем городе \nможно сдать вторсырьё \nна переработку"}
                              title={"Пункты сбора"}
                              bgImg={map}
-                             bgImgWidth={312}
-                             bgImgHeight={230}/>
+                             />
                     <NavCard text={"Используй заработанные  \nэкокоины для покупки товаров  \nиз переработанных материалов "}
                              title={"ЭкоМаркет"}
                              bgImg={market}
-                             bgImgWidth={237}
-                             bgImgHeight={257}
-                    />
+                             />
                 </div>
             </div>
             <Footer/>
