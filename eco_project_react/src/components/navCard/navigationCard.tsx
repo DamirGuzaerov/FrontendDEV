@@ -7,7 +7,12 @@ interface NavCardProps{
     text:string,
     bgImg:string,
 }
-const NavCard :FC<NavCardProps> = ({title,text,bgImg}) => {
+const NavCard :FC<NavCardProps> = (props) => {
+    const {
+        title,
+        text,
+        bgImg} = props;
+
     return (
         <div className={styles.navCard__wrapper}>
             <div className={styles.navCard}>

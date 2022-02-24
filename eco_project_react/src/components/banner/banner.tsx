@@ -10,7 +10,15 @@ interface BannerProps{
     bgImg:string,
 }
 
-const Banner :FC<BannerProps> = ({bgColor,title,text,btnText,bgImg}) => {
+const Banner :FC<BannerProps> = (props) => {
+
+    const {
+        bgColor,
+        title,
+        text,
+        btnText,
+        bgImg} = props;
+
     return (
         <div className={styles.bannerWrapper} >
             <div className={styles.banner} style={{"backgroundColor": `${bgColor}`}}>

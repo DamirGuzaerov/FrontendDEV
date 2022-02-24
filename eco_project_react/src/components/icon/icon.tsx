@@ -6,7 +6,12 @@ interface IconProps{
     height:number;
 }
 
-const Icon: FC<IconProps> = ({ name, width=24,height=24}) => {
+const Icon: FC<IconProps> = (props) => {
+    const {
+        name,
+        width=24,
+        height=24} = props;
+
     return (
         <svg
             version='1.1'
