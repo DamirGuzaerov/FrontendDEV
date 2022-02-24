@@ -24,7 +24,7 @@ const Banner :FC<BannerProps> = (props) => {
                     </button>
                 </div>
                 <div className={styles.bannerImg}>
-                    <Icon name={props.bgImg} width={props.bgImgWidth} height={props.bgImgHeight}/>
+                    <object data={props.bgImg} type=""></object>
                 </div>
             </div>
         </div>

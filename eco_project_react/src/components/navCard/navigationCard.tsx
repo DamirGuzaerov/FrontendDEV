@@ -23,7 +23,7 @@ const NavCard :FC<NavCardProps> = (props) => {
                 </div>
                 <div className={styles.navCardImgWrapper}>
                     <div className={styles.navCardImg}>
-                        <Icon name={props.bgImg} width={props.bgImgWidth} height={props.bgImgHeight}/>
+                        <object data={props.bgImg} type=""></object>
                     </div>
                 </div>
             </div>

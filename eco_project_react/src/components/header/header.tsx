@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./header.module.sass";
 import Icon from "../icon/icon";
+import logo from "../../assets/images/logo.svg"
 
 function Header() {
     return (
@@ -8,7 +9,7 @@ function Header() {
                 <header className={styles.header}>
                     <nav className={styles.navPanel}>
                         <div className={styles.header__logo}>
-                            <Icon name={"ecorusLogo"} width={94} height={18}/>
+                            <object data={logo} type=""></object>
                         </div>
                         <ul className={styles.navList}>
                             <li className={styles.navLink}>
