@@ -7,20 +7,20 @@ interface NavCardProps{
     text:string,
     bgImg:string,
 }
-const NavCard :FC<NavCardProps> = (props) => {
+const NavCard :FC<NavCardProps> = ({title,text,bgImg}) => {
     return (
         <div className={styles.navCard__wrapper}>
             <div className={styles.navCard}>
                 <div className={styles.navCardContent}>
-                    <h1 className={styles.navCardTitle}>{props.title}</h1>
-                    <p className={styles.navCardText}>{props.text}</p>
+                    <h1 className={styles.navCardTitle}>{title}</h1>
+                    <p className={styles.navCardText}>{text}</p>
                     <button className={styles.navCardBtn}>
                         <img src={rightArrow} alt=""/>
                     </button>
                 </div>
                 <div className={styles.navCardImgWrapper}>
                     <div className={styles.navCardImg}>
-                        <object data={props.bgImg} type=""/>
+                        <object data={bgImg} type=""/>
                     </div>
                 </div>
             </div>

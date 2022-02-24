@@ -10,19 +10,19 @@ interface BannerProps{
     bgImg:string,
 }
 
-const Banner :FC<BannerProps> = (props) => {
+const Banner :FC<BannerProps> = ({bgColor,title,text,btnText,bgImg}) => {
     return (
         <div className={styles.bannerWrapper} >
-            <div className={styles.banner} style={{"backgroundColor": `${props.bgColor}`}}>
+            <div className={styles.banner} style={{"backgroundColor": `${bgColor}`}}>
                 <div className={styles.bannerContent}>
-                    <h1 className={styles.bannerTitle}>{props.title}</h1>
-                    <p className={styles.bannerText}>{props.text}</p>
+                    <h1 className={styles.bannerTitle}>{title}</h1>
+                    <p className={styles.bannerText}>{text}</p>
                     <button className={styles.bannerBtn}>
-                        <span className={styles.bannerBtnText}>{props.btnText}</span>
+                        <span className={styles.bannerBtnText}>{btnText}</span>
                     </button>
                 </div>
                 <div className={styles.bannerImg}>
-                    <object data={props.bgImg} type=""/>
+                    <object data={bgImg} type=""/>
                 </div>
             </div>
         </div>
