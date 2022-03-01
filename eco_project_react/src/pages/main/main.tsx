@@ -12,15 +12,17 @@ function Main() {
             <Header/>
             <div className={styles.mainCards__wrapper}>
                 <BannerSwiper/>
-                <div className={styles.navCards}>
-                    <NavCard text={"Посмотри, где в твоем городе \nможно сдать вторсырьё \nна переработку"}
-                             title={"Пункты сбора"}
-                             bgImg={map}
-                             />
-                    <NavCard text={"Используй заработанные  \nэкокоины для покупки товаров  \nиз переработанных материалов "}
-                             title={"ЭкоМаркет"}
-                             bgImg={market}
-                             />
+                <div className={styles.navCardsWrapper}>
+                    <div className={styles.navCards}>
+                        <NavCard text={"Посмотри, где в твоем городе \nможно сдать вторсырьё \nна переработку"}
+                                 title={"Пункты сбора"}
+                                 bgImg={map}
+                        />
+                        <NavCard text={"Используй заработанные  \nэкокоины для покупки товаров  \nиз переработанных материалов "}
+                                 title={"ЭкоМаркет"}
+                                 bgImg={market}
+                        />
+                    </div>
                 </div>
             </div>
             <Footer/>

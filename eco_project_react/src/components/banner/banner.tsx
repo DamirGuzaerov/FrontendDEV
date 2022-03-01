@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import styles from "./banner.module.sass";
-import Icon from "../icon/icon";
+import Icon from "../ui/icon/icon";
 
 interface BannerProps{
     title:string,

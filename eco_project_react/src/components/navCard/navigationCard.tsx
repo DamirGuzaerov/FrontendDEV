@@ -25,7 +25,7 @@ const NavCard :FC<NavCardProps> = (props) => {
                 </div>
                 <div className={styles.navCardImgWrapper}>
                     <div className={styles.navCardImg}>
-                        <object data={bgImg} type=""/>
+                        <img src={bgImg} alt=""/>
                     </div>
                 </div>
             </div>

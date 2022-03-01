@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./header.module.sass";
-import Icon from "../icon/icon";
+import Icon from "../ui/icon/icon";
 import logo from "../../assets/images/logo.svg"
 
 function Header() {

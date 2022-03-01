@@ -1,5 +1,5 @@
 import styles from './footer.module.sass'
-import Icon from "../icon/icon";
+import Icon from "../ui/icon/icon";
 
 
 const Footer = () =>
